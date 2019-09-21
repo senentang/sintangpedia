@@ -26,3 +26,17 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    //layout
+    materialVersion = '1.0.0'
+    shimmerVersion = '0.4.0'
+
+    nav_version = '2.1.0-rc01'
+
+    //aac
+    lifecycle_version = '2.1.0'
+
+    //dependency injection
+    daggerVersion = '2.22.1'
+}

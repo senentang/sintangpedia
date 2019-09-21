@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="id.ihwan.sintangpedia.Place" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/place_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/list_item_place_image_desc"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/kelam" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toStartOf="@id/chevron_right"
+                android:layout_toLeftOf="@id/chevron_right"
+                android:layout_toEndOf="@id/place_image"
+                android:layout_toRightOf="@id/place_image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto"
+                    android:maxLines="2"
+                    android:text="@{model.name}"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Bukit Kelam Sintang" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_light"
+                    android:maxLines="1"
+                    android:text="@{model.lokasi}"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    tools:text="Sintang, Kalimantan Barat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_light"
+                    android:maxLines="3"
+                    android:text="@{model.deskripsi}"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    tools:text="@string/lorem_ipsum_desc" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/chevron_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/shape"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
