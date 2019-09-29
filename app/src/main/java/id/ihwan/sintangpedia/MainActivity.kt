@@ -2,9 +2,10 @@ package id.ihwan.sintangpedia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.databinding.DataBindingUtil.setContentView
+import id.ihwan.sintangpedia.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,13 +13,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
         viewModel.getListPlace()
 
         viewModel.liveDataListPlace.observe(this, Observer {
-            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+
         })
+
+
     }
 }

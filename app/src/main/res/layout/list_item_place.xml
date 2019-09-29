@@ -59,7 +59,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/roboto_light"
                     android:maxLines="1"
-                    android:text="@{model.lokasi}"
+                    android:text="@{model.location}"
                     android:textSize="12sp"
                     android:textStyle="italic"
                     tools:text="Sintang, Kalimantan Barat" />
@@ -71,7 +71,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/roboto_light"
                     android:maxLines="3"
-                    android:text="@{model.deskripsi}"
+                    android:text="@{model.description}"
                     android:textSize="12sp"
                     android:textStyle="normal"
                     tools:text="@string/lorem_ipsum_desc" />

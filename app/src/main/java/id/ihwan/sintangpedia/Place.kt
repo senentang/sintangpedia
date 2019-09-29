@@ -2,8 +2,9 @@ package id.ihwan.sintangpedia
 
 data class Place(
     val name: String,
-    val lokasi: String,
-    val deskripsi: String,
-    val thumbnail: String,
-    val gambar: String
+    val location: String,
+    val description: String,
+    val image: String,
+    val latitude: String,
+    val longitude: String
 )
